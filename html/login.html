@@ -1,20 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-<meta charset="utf-8"> 
-<title>로그인 폼</title></head>
+    <meta charset="UTF-8">
+    <title>로그인 폼</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
-<h3>로그인 폼</h3>
-<hr>
-<form name="fo" method="get">
-id : <input type="text" size="15" value=""><br>
-password : <input type="password" size="15" value="">
-				 <input type="submit" value="완료">
-</form>
 
-<div>  <input type="checkbox" value="자동 로그인"> 
-<p> 로그인 </p>
-<p> sign up </p> </div>
-    
-</body>
+    <div class="login-box">
+        <h2>로그인</h2>
+        
+        <form name="loginForm" method="get" action="#">
+            
+            <div class="form-group">
+                <label for="userid">아이디</label>
+                <input type="text" id="userid" size="15">
+            </div>
+            
+            <div class="form-group">
+                <label for="userpw">비밀번호</label>
+                <input type="password" id="userpw" size="15">
+            </div>
+
+            <div class="options">
+                <div class="auto-login">
+                    <input type="checkbox" id="auto-login" value="auto">
+                    <label for="auto-login">자동 로그인</label>
+                </div>
+                <span></span>
+            </div>
+            
+            <button type="submit" class="login-button">로그인</button>
+
+            <div class="signup">
+          
+                <a href="#">회원 가입</a>
+            </div>
+        </form>
+    </div>
+
+    </body>
 </html>
