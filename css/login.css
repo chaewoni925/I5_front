@@ -5,7 +5,7 @@ body {
     justify-content: center; /*가로 중앙 */
     align-items: center;   /* 세로 중앙 */
     min-height: 100vh;
-    background-color: rgba(255, 255, 255, 1); /* 바깥 배경색 */
+    background-color: #FFFFFF; /* 바깥 배경색 */
     margin: 0;
 }
 
