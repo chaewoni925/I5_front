@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>내 단어장</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-    <link rel="stylesheet" href="../css/vocabulary.css">
-</head>
+    <link rel="stylesheet" href="../css/v.gend.css"> </head>
 <body>
 
     <header class="site-header">
@@ -107,6 +106,34 @@
                 </div>
             </article>
 
-        </section> </main> <script src="../js/vocabulary.js"></script>
+        </section> 
+    
+    </main> <div class="modal-overlay hidden" id="flashcard-modal">
+        
+        <button class="modal-close-btn" id="close-modal-btn">&times;</button>
+        
+        <div class="flashcard-container" id="flashcard-container">
+            
+            <div class="flashcard-front">
+                <div class="card-word">
+                    단어
+                </div>
+            </div>
+
+            <div class="flashcard-back">
+                <div class="card-definition">
+                    <h3>사과</h3>
+                    <span class="card-subtitle">상세 뜻</span>
+                    <p>사과는 맛있고 건강한 과일입니다. 그것은 많은 비타민을 포함하고 있습니다.</p>
+                </div>
+            </div>
+
+        </div>
+        
+        <button class="modal-flip-btn" id="flip-btn">의미보기 | SPACE</button>
+    </div>
+
+    <script src="../js/v.gend.js"></script>
+
 </body>
 </html>
