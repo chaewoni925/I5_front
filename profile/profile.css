@@ -1,72 +1,96 @@
-/* --- 기본 설정 --- */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+/* 기본 리셋 및 폰트 */
 
 body {
-    font-family: sans-serif;
-    background-color: #f7f8fa; /* 페이지 전체 배경색 */
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #FFFFFF; /* 배경색 설정 */
+    margin: 0;
+    padding: 0;
     color: #333;
+    line-height: 1.6;
+  
 }
 
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+}
 
-.site-header {
-    width: 100%;
-    padding: 20px 40px;
+/* 헤더/검색창 스타일 */
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ffffff;
-    border-bottom: 1px solid #e0e0e0;
+    padding: 20px 0;
+    border-top: 2px solid #eee;
+    border-bottom: 2px solid #eee;
+    margin-bottom: 20px;
 }
 
 .logo {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
+    color: #333;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
 }
 
 .search-bar input {
-    padding: 8px 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
 }
 
-/* --- 2. 메인 컨텐츠 영역 --- */
-.page-container {
-    width: 100%;
-    max-width: 1000px; /* 최대 너비 설정 */
-    margin: 40px auto; /* 페이지 중앙 정렬 */
-    padding: 40px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+.search-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px;
 }
 
+/* 공통 섹션 스타일 */
 section {
-    margin-bottom: 60px;
+    padding: 20px 0;
 }
 
-section h2 {
+.section-title {
+    height: 50px;
     font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 25px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align:center;
 }
 
-
-.profile-section .profile-header p {
-    font-size: 15px;
-    color: #777;
-    margin-top: -20px;
-    margin-bottom: 25px;
+.section-description {
+    font-size: 20px;
+    color: black;
+    padding: 30px;
+    margin-bottom: 20px;
+    text-align:center;
+    border-bottom: 2px solid #eee;
 }
 
-.profile-content {
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #eee; /* 구분선 색상 */
+    margin: 10px 0;
+}
+
+/* --- 프로필 섹션 --- */
+.profile-card {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 0;
 }
 
 .profile-info {
@@ -74,113 +98,146 @@ section h2 {
     align-items: center;
 }
 
-.avatar {
-    width: 80px;
-    height: 80px;
+.profile-avatar {
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-    background-color: #e0e0e0; /*  이미지 대신 임시 배경색 */
-    margin-right: 20px;
-}
-
-.user-details {
-    display: flex;
-    flex-direction: column;
+    background-color: #e0e0e0; /* 아바타 회색 */
+    margin-right: 15px;
 }
 
 .username {
-    font-size: 20px;
+    display: block;
+    font-size: 18px;
     font-weight: bold;
-    margin-bottom: 5px;
+    /*border:*/
 }
 
-.email {
-    font-size: 14px;
-    color: #777;
+.email-placeholder {
+    display: block;
+    font-size: 12px;
+    color: #888;
 }
 
-.profile-edit-btn {
-    background-color: #333;
+.edit-button {
+    background-color: #85d06d; /* 이미지 속 초록색 */
     color: white;
     border: none;
-    padding: 12px 20px;
-    border-radius: 4px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
     cursor: pointer;
     font-weight: bold;
-    font-size: 14px;
 }
 
+/* --- 활동 요약 섹션 --- */
+.activity-summary .section-title {
+    margin-bottom: 30px;
+}
 
 .summary-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3개의 카드를 1:1:1 비율로 */
+    display: flex;
     gap: 20px;
 }
 
-.card {
-    background-color: #f9f9f9;
-    padding: 25px;
-    border-radius: 8px;
-    border: 1px solid #e0e0e0;
+.summary-card {
+    flex: 1;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-.card-title {
-    display: block;
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 10px;
+.card-icon-saved,
+.card-icon-ranking {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 10px;
+    /* 아이콘 시뮬레이션 */
+    border-radius: 5px;
+    border: 2px solid #85d06d; 
+    box-shadow: inset 0 0 0 3px #85d06d30;
+    background-color: #e6ffe6; 
+}
+.card-icon-ranking {
+    border-color: #92b0ff;
+    box-shadow: inset 0 0 0 3px #92b0ff30;
+    background-color: #e6f0ff; 
 }
 
-.card-value {
+.card-count {
     font-size: 24px;
     font-weight: bold;
+    margin: 5px 0;
 }
 
+.card-label {
+    font-size: 14px;
+    color: #666;
+}
 
-.vocabulary-section {
+/* --- 내 단어장 섹션 --- */
+.my-wordbook {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
 }
 
-.voca-link {
-    text-decoration: none;
-    color: #333;
-    font-weight: 600;
-    font-size: 16px;
-}
-
-
-.settings-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 20px;
-}
-
-.setting-item {
+.wordbook-link {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    border: 1px solid #85d06d;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    border-color:#4E4E4E66;
+    padding: 10px 20px;
     cursor: pointer;
+    font-weight: bold;
+    color: #333;
+    font-size:20px;
+    width:340px;
+    height:132px;
 }
 
-/*미완성 -> 이미지 파일 받고 수정할 예정*/
-.setting-item img {
-    width: 60px;  /* 이미지 가로 크기 */
-    height: 60px; /* 이미지 세로 크기 */
-    margin-bottom: 15px;
+.link-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50x;
+    margin-right: 10px;
+}
+
+.arrow-icon {
+    font-size: 20px;
+    margin-left: 10px;
+    color: #85d06d;
+}
+
+
+/* --- 고객 지원 섹션 --- */
+.customer-support .section-title {
+    margin-bottom: 20px;
     
-    /*원형 배경 추가*/
-    background-color: #f0f0f0;
-    border-radius: 50%;
-    padding: 5px; /* 배경과 이미지 사이 여백 */
-    object-fit: contain; /* 이미지가 원 안에 맞게 축소됨 */
 }
 
+.support-links {
+    display: flex;
+    gap: 30px;
+    margin-left:255px;
+    align-items: center;
+}
 
-.setting-item span {
+.support-links a {
+    text-decoration: none;
+    color: #666;
     font-size: 14px;
-    font-weight: 500;
+    padding: 5px 0;
+    
 }
+
+.support-links a:hover {
+    color: #333;
+    
+}
+
