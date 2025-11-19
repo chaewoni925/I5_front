@@ -61,10 +61,7 @@ body {
 
 /* 4. 아이콘 영역 */
 .icon-container {
-    width: 100px;
-    height: 100px;
-    background-color: #f7fff5; /* 아이콘 뒤의 연한 배경색 */
-    border: 1px solid #6cc644; /* 연한 테두리 */
+    
     border-radius: 20px;
     margin: 30px 30px 30px 30px;
     display: flex;

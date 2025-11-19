@@ -277,14 +277,18 @@ body {
     width: 100vw;
     height: 100vh;
     background: rgba(0, 0, 0, 0.8);
-    display: none;
-    justify-content: center;
+    display:block;
+    justify-content: initial;
     align-items: center;
     z-index: 1000;
 }
 
 .modal-content {
     position: relative;
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background: #fff;
     border-radius: 58px;
     padding: 150px 32px 62px 32px;
@@ -292,6 +296,9 @@ body {
     height:525px;
     text-align: center;
     box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    max-width:90%;
+    height:auto;
+    min-height: 525px;
 }
 
 .modal-close-btn {
@@ -309,7 +316,7 @@ body {
     font-size: 40px;
     font-weight: 700;
     margin-bottom: 60px;
-    margin-top: 12px;
+    margin-top: 0px;
 }
 
 .modal-start-btn {

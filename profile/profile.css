@@ -1,96 +1,118 @@
-/* 기본 리셋 및 폰트 */
-
 body {
-    font-family: 'Noto Sans KR', sans-serif;
-    background-color: #FFFFFF; /* 배경색 설정 */
+    font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #FFFFFF;
     margin: 0;
     padding: 0;
     color: #333;
     line-height: 1.6;
-  
 }
-
 .container {
-    max-width: 1440px;
+    max-width: 1200px;
     margin: 0 auto;
     background-color: white;
-    padding: 30px;
+    padding: 20px 40px;
+    min-height: 100vh;
 }
 
-/* 헤더/검색창 스타일 */
+/* ======================= 헤더 ======================= */
 .header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 20px 0;
-    border-top: 2px solid #eee;
-    border-bottom: 2px solid #eee;
-    margin-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 60px;
 }
-
-.logo {
+.logo-text-left {
     font-size: 24px;
     font-weight: bold;
     color: #333;
+    margin-right: 40px;
+    margin-top: 20px;
 }
-
+.home-text {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: 15px;
+    white-space: nowrap;
+}
 .search-bar {
     display: flex;
     align-items: center;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 8px 15px;
+    margin-top: 20px;
+    background-color: #000000;
 }
-
 .search-bar input {
     border: none;
     outline: none;
-    padding: 5px 10px;
+    padding: 5px;
+    background: transparent;
+    font-size: 14px;
+    width: 200px;
 }
-
 .search-button {
     background: none;
     border: none;
     cursor: pointer;
     font-size: 16px;
-    padding: 5px;
+    padding: 0 5px;
 }
 
-/* 공통 섹션 스타일 */
+.profile-divider {
+    border: 0;
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 20px auto 40px; /* 상단 20px, 하단 40px 여백 */
+    width: 100%;
+    display: block; 
+}
+
+/* ======================= 구분선 ======================= */
+.section-divider {
+    border: 0;
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 20px auto 40px;
+    width: 100%;
+    display:block;
+}
+
+/* ======================= 공통 섹션 스타일 ======================= */
 section {
-    padding: 20px 0;
+    margin-bottom: 40px;
 }
 
 .section-title {
-    height: 50px;
-    font-size: 24px;
+    font-size: 32px;
     font-weight: bold;
-    margin-bottom: 5px;
-    text-align:center;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .section-description {
-    font-size: 20px;
-    color: black;
-    padding: 30px;
-    margin-bottom: 20px;
-    text-align:center;
-    border-bottom: 2px solid #eee;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 40px;
+    text-align: center;
 }
 
-hr {
-    border: 0;
-    height: 1px;
-    background-color: #eee; /* 구분선 색상 */
-    margin: 10px 0;
+/* ======================= 프로필 섹션 ======================= */
+.profile-section {
+    text-align: center;
 }
 
-/* --- 프로필 섹션 --- */
 .profile-card {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    padding: 30px 0;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .profile-info {
@@ -99,145 +121,346 @@ hr {
 }
 
 .profile-avatar {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    background-color: #e0e0e0; /* 아바타 회색 */
-    margin-right: 15px;
+    background-color: #d0d0d0;
+    margin-right: 20px;
+}
+
+.profile-text {
+    text-align: left;
 }
 
 .username {
     display: block;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
-    /*border:*/
+    margin-bottom: 5px;
+    color: #111;
 }
 
 .email-placeholder {
     display: block;
-    font-size: 12px;
+    font-size: 13px;
     color: #888;
+    background-color: #e8e8e8;
+    padding: 3px 8px;
+    border-radius: 4px;
+    display: inline-block;
 }
 
 .edit-button {
-    background-color: #85d06d; /* 이미지 속 초록색 */
+    background-color: #7bc96f;
     color: white;
     border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
+    border-radius: 8px;
+    width: 100px;
+    height: 36px;
     font-size: 14px;
     cursor: pointer;
-    font-weight: bold;
+    font-weight: 600;
 }
 
-/* --- 활동 요약 섹션 --- */
-.activity-summary .section-title {
-    margin-bottom: 30px;
+.edit-button:hover {
+    background-color: #6bb85f;
+}
+
+/* ======================= 활동 요약 섹션 ======================= */
+.activity-summary {
+    text-align: center;
 }
 
 .summary-cards {
     display: flex;
-    gap: 20px;
+    gap: 30px;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .summary-card {
     flex: 1;
-    border: 1px solid #eee;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
+    max-width: 300px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: left;
     background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .card-icon-saved,
 .card-icon-ranking {
-    width: 60px;
-    height: 60px;
-    margin: 0 auto 10px;
-    /* 아이콘 시뮬레이션 */
-    border-radius: 5px;
-    border: 2px solid #85d06d; 
-    box-shadow: inset 0 0 0 3px #85d06d30;
-    background-color: #e6ffe6; 
-}
-.card-icon-ranking {
-    border-color: #92b0ff;
-    box-shadow: inset 0 0 0 3px #92b0ff30;
-    background-color: #e6f0ff; 
+    
+    flex-shrink: 0;
+    border-radius: 12px;
+    position: relative;
 }
 
-.card-count {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 5px 0;
+.card-icon-saved::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 45px;
+    height: 35px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+
+.card-icon-ranking::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 35px;
+   
+    border-radius: 6px;
+}
+
+.card-icon-ranking::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card-info {
+    flex: 1;
 }
 
 .card-label {
-    font-size: 14px;
-    color: #666;
+    font-size: 16px;
+    color: #333;
+    margin: 0 0 8px 0;
+    font-weight: 500;
 }
 
-/* --- 내 단어장 섹션 --- */
+.card-count {
+    font-size: 20px;
+    font-weight: normal;
+    margin: 0;
+    color: #111;
+}
+
+/* ======================= 내 단어장 섹션 ======================= */
 .my-wordbook {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
+
+
+.my-wordbook .section-title {
+    text-align: left;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+
 
 .wordbook-link {
     display: flex;
     align-items: center;
-    border: 1px solid #85d06d;
-    background-color: #FFFFFF;
-    border-radius: 10px;
-    border-color:#4E4E4E66;
-    padding: 10px 20px;
+    justify-content: space-between;
+    border: 1px solid #d0d0d0;
+    background-color: #FFF;
+    border-radius: 12px;
+    padding: 30px 35px;
     cursor: pointer;
-    font-weight: bold;
     color: #333;
-    font-size:20px;
-    width:340px;
-    height:132px;
+    font-size: 18px;
+    font-weight: 500;
+    flex: 1;
+    margin-left: auto;
+    max-width: 400px;
+}
+
+.wordbook-link:hover {
+    background-color: #fafafa;
+}
+
+.link-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 .link-icon {
-    width: 20px;
+  
+    border-radius: 8px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.link-icon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25px;
     height: 20px;
-    border-radius: 50x;
-    margin-right: 10px;
+    background-color: #fff;
+    border-radius: 4px;
 }
 
 .arrow-icon {
     font-size: 20px;
-    margin-left: 10px;
-    color: #85d06d;
+    color: #7bc96f;
+    font-weight: bold;
 }
 
-
-/* --- 고객 지원 섹션 --- */
-.customer-support .section-title {
-    margin-bottom: 20px;
-    
+.customer-support {
+    text-align: center;
 }
 
 .support-links {
     display: flex;
-    gap: 30px;
-    margin-left:255px;
-    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 40px;
 }
 
 .support-links a {
     text-decoration: none;
-    color: #666;
-    font-size: 14px;
-    padding: 5px 0;
-    
+    color: #444;
+    font-size: 18px;
+    font-weight: 400;
+    margin-left:90px;
 }
 
 .support-links a:hover {
-    color: #333;
-    
+    color: #111;
 }
 
+/* ======================= 프로필 수정 모달 ======================= */
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(51, 51, 51, 0.4);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-content {
+    background: #fff;
+    border-radius: 24px;
+    width: 440px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    text-align: center;
+    position: relative;
+}
+
+.modal-close-btn {
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #666;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+
+.modal-profile-avatar {
+    margin: 30px auto 15px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #d0d0d0;
+}
+
+.modal-image-btn {
+    background: #f0f0f0;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 20px;
+    color: #333;
+    font-size: 13px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.modal-username {
+    margin: 20px auto 8px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.modal-edit-icon {
+    font-size: 16px;
+    color: #999;
+}
+
+.modal-email {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.modal-section-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #111;
+    margin: 25px 0 10px;
+}
+
+.modal-password-desc {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.modal-pw-btn {
+    background: #f0f0f0;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    color: #333;
+    font-size: 13px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.modal-delete-btn {
+    background: #f0f0f0;
+    border: none;
+    border-radius: 6px;
+    color: #666;
+    font-size: 13px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .container { padding: 20px; }
+    .summary-cards { flex-direction: column; }
+    .my-wordbook { flex-direction: column; align-items: stretch; }
+    .my-wordbook .section-title { text-align: center; margin-bottom: 20px; }
+    .wordbook-link { max-width: 100%; margin-left: 0; }
+    .support-links { flex-direction: column; gap: 20px; }
+}

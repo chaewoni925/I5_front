@@ -301,14 +301,13 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    overflow: hidden;
 }
 
 .flashcard-word {
     font-size: 64px;
     font-weight: 700;
     color: #111;
-    margin-top: 100px;
+    margin-top: 50px;
     position: relative;
     z-index: 2;
 }
@@ -347,6 +346,7 @@ body {
     color: #111;
     font-weight: 700;
     text-align: center;
+    margin-top:20px;
 }
 
 /* 양쪽 화살표 */

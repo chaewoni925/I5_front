@@ -12,6 +12,13 @@ body {
     margin: 0;
 }
 
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+}
+
 .forgot-pw{
   margin-left: 90px;
   font-size:20px;
